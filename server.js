@@ -1,7 +1,7 @@
 require ('dotenv').config ();
 const express = require ('express');
 const utils = require ('./utils');
-
+const port = 4000;
 const app = express ();
 
 app.get ('/auth', async (req, res) => {
@@ -32,4 +32,4 @@ app.get (process.env.REDIRECT_URI, async (req, res) => {
   }
 });
 
-app.listen (4000);
+app.listen (port);
